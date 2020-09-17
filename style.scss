@@ -1,7 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Kufam:wght@500&display=swap');
+//變數-方便全部一起修改
+$color-main: #E86895;
+$color-sub: #FF1F17;
+//歸零重設
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+}
+//導覽列
+#navigation {
 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 
-h1 {
-    color: palevioletred;
-    font-family: 'Kufam', cursive;
+    .logo {
+        font-family: 'Kufam', cursive;
+        font-size: 32px;
+        text-decoration: none;
+        transition: 0.3S;
+    }
+    .social {
+        img {
+            filter: invert(62%) sepia(43%) saturate(4496%) hue-rotate(308deg) brightness(88%) contrast(95%);
+            transition: 0.6S;
+
+            &:hover {
+                filter: invert(46%) sepia(9%) saturate(6882%) hue-rotate(208deg) brightness(100%) contrast(103%);
+            }
+        }
+    }
+   
 }
