@@ -159,7 +159,7 @@ p {
 
 footer {
   background: #E86895;
-  padding: 100px;
+  padding: 90px 0;
   text-align: center;
 }
 
@@ -203,5 +203,7 @@ footer .social img:hover {
 
 #copyright {
   color: #eee;
+  font-size: 8px;
+  margin-top: 50px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -170,7 +170,7 @@ margin-bottom: 50px;
 //頁尾
 footer {
     background: $color-main;
-    padding: 100px;
+    padding: 90px 0;
     text-align: center;
 
     .logo {
@@ -211,4 +211,6 @@ footer {
 
 #copyright {
     color: $color-white;
+    font-size: 8px;
+    margin-top: 50px;
 }
