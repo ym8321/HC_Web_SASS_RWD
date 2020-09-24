@@ -32,9 +32,17 @@
   letter-spacing: 2px;
 }
 
+#navigation .logo:hover {
+  color: #FF1F17;
+}
+
+#navigation link {
+  text-align: center;
+}
+
 #navigation link a {
   text-decoration: none;
-  padding: 30px;
+  padding: 30px 30px 30px 40px;
   -webkit-transition: 0.3S;
   transition: 0.3S;
 }
@@ -107,7 +115,7 @@ p {
 
 .button-div {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 #works {
@@ -151,7 +159,7 @@ p {
 
 footer {
   background: #E86895;
-  padding: 50px;
+  padding: 100px;
   text-align: center;
 }
 
