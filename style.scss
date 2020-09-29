@@ -14,6 +14,12 @@ $color-bg-gray: #f9f9f9;
 
 //字體
 $font-family-main:'Kufam', cursive;
+
+//RWD :桌上、平板、手機
+$desktop: 1025px;
+$table: 1024px;
+$mobile: 767px;
+
 //歸零重設
 * {
     margin: 0;
@@ -26,41 +32,66 @@ $font-family-main:'Kufam', cursive;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 120px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     align-items: center;
     position: fixed;
     width: 100%;
     background: lightpink;
 
+    // 選單
+    #menu {
+
+        grid-area: menu;
+
+        //桌電 : 隱藏
+        @media screen and (min-width: $desktop){
+            display: none;
+        }
+        //平板 : 顯示
+        @media screen and (max-width: $table){
+            display: block;
+        }
+    }
+
 
     .logo {
         font-family: $font-family-main;
-        font-size: 32px;
+        font-size: 42px;
         text-decoration: none;
         transition: 0.3S;
         letter-spacing: 2px;
+        grid-area: logo;
 
         &:hover {
             color: $color-sub;
         }
     }
 
-    link {
+    .link {
 
         text-align: center;
+
          a {
             text-decoration: none;
             padding: 30px 30px 30px 40px;
             transition: 0.3S;
+            letter-spacing: 10px;
 
             &:hover {
                 color: $color-sub;
             }
-           }
+        } 
+
+        // 平板隱藏
+        @media screen and (max-width: $table){
+            display: none;
+        }
     }
     .social {
-
         text-align: right;
+        grid-area: social;
+
         img {
             filter: invert(62%) sepia(43%) saturate(4496%) hue-rotate(308deg) brightness(88%) contrast(95%);
             transition: 0.3S;
@@ -89,7 +120,7 @@ $font-family-main:'Kufam', cursive;
     text-align: center;
 }
 
-#about h2 {
+ h2 {
     font-size: 420px;
     font-family: $font-family-main;
     letter-spacing: 20px;

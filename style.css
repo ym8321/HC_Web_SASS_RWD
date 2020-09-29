@@ -13,6 +13,7 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 120px;
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   -webkit-box-align: center;
@@ -23,36 +24,61 @@
   background: lightpink;
 }
 
+#navigation #menu {
+  grid-area: menu;
+}
+
+@media screen and (min-width: 1025px) {
+  #navigation #menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #navigation #menu {
+    display: block;
+  }
+}
+
 #navigation .logo {
   font-family: "Kufam", cursive;
-  font-size: 32px;
+  font-size: 42px;
   text-decoration: none;
   -webkit-transition: 0.3S;
   transition: 0.3S;
   letter-spacing: 2px;
+  grid-area: logo;
 }
 
 #navigation .logo:hover {
   color: #FF1F17;
 }
 
-#navigation link {
+#navigation .link {
   text-align: center;
 }
 
-#navigation link a {
+#navigation .link a {
   text-decoration: none;
   padding: 30px 30px 30px 40px;
   -webkit-transition: 0.3S;
   transition: 0.3S;
+  letter-spacing: 10px;
 }
 
-#navigation link a:hover {
+#navigation .link a:hover {
   color: #FF1F17;
+}
+
+@media screen and (max-width: 1024px) {
+  #navigation .link {
+    display: none;
+  }
 }
 
 #navigation .social {
   text-align: right;
+  grid-area: social;
 }
 
 #navigation .social img {
@@ -81,7 +107,7 @@
   text-align: center;
 }
 
-#about h2 {
+h2 {
   font-size: 420px;
   font-family: "Kufam", cursive;
   letter-spacing: 20px;
