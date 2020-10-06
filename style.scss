@@ -32,7 +32,7 @@ $mobile: 767px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px 120px;
+    padding: 30px 120px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     align-items: center;
     position: fixed;
@@ -175,7 +175,7 @@ margin-bottom: 50px;
 }
 //按鈕-盒型
 .button-box {
-    padding: 10px 60px;
+    padding: 20px 80px;
     border: 2px solid;
     text-decoration: none;
     transition: 0.3S;
@@ -189,7 +189,7 @@ margin-bottom: 50px;
 //按鈕外的區塊
 .button-div {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 //作品集
 #works {
@@ -250,7 +250,7 @@ margin-bottom: 50px;
 
 //頁尾
 footer {
-    background: $color-main;
+    background: lightpink;
     padding: 90px 0;
     text-align: center;
 
@@ -275,7 +275,7 @@ footer {
     }
     .social {
 
-        text-align: right;
+        padding: 20px 0;
         img {
             filter: invert(62%) sepia(43%) saturate(4496%) hue-rotate(308deg) brightness(88%) contrast(95%);
             transition: 0.3S;
@@ -283,7 +283,9 @@ footer {
             margin-left: 30px;
 
             &:hover {
-                filter: invert(46%) sepia(9%) saturate(6882%) hue-rotate(208deg) brightness(100%) contrast(103%);
+                transition: 0.3S;
+                color: white;
+            }
             }
         }
     }
