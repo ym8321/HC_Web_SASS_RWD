@@ -167,7 +167,7 @@ p {
 }
 
 .button-box {
-  padding: 20px 80px;
+  padding: 20px 70px;
   border: 2px solid;
   text-decoration: none;
   -webkit-transition: 0.3S;
@@ -247,7 +247,7 @@ p {
 
 footer {
   background: lightpink;
-  padding: 90px 0;
+  padding: 50px 0;
   text-align: center;
 }
 
