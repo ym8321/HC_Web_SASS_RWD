@@ -5,12 +5,11 @@
 $color-main: #E86895;
 $color-sub: #FF1F17;
 $color-white: #eee;
+//背景顏色
+$color-bg-gray: #f9f9f9;
 
 //文字大小:最大
 $font-size-big: 36px;
-
-//背景顏色
-$color-bg-gray: #f9f9f9;
 
 //字體
 $font-family-main:"Kufam", cursive;
@@ -26,11 +25,12 @@ $mobile: 767px;
     padding: 0;
     box-sizing: border-box;
     font-family: 微軟正黑體;
+    color: $color-main;
 }
 //導覽列
 #navigation {
-
     display: grid;
+
     grid-template-columns: 1fr 1fr 1fr;
     padding: 30px 120px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -38,8 +38,12 @@ $mobile: 767px;
     position: fixed;
     width: 100%;
     background: lightpink;
-    // z軸 調整導覽列深度 : 靠近螢幕 不會被覆蓋住
+    // z軸 深度軸 : 離眼睛越近 數字越大
     z-index: 1;
+
+    @media screen and (min-width: $desktop){
+        grid-template-areas: "logo social menu";
+    }
    
     //平板
     @media screen and (max-width: $table) {
@@ -48,7 +52,7 @@ $mobile: 767px;
     }
     //手機
     @media screen and (max-width: $mobile) {
-        padding: 10px 6px;
+        grid-template-areas: "logo social menu";
     }
 
     // 選單
@@ -141,6 +145,25 @@ $mobile: 767px;
 
     .dots {
         bottom : 80px;
+    }
+   //平板 
+    @media screen and (max-width: $table){
+        height: 100%;
+
+        .slick-track {
+            height: 900px;
+        }
+
+        img {
+            // 物件適應 : img 版本的 background-size
+            object-fit: cover;
+        }
+    }   
+    //手機
+    @media screen and (max-width: $mobile) {
+        .slick-track {
+            height: 500px;
+        }
     }
 }
 
@@ -260,41 +283,25 @@ margin-bottom: 50px;
 //頁尾
 footer {
     background: lightpink;
-    padding: 50px 0;
+    padding: 90px 0;
     text-align: center;
 
     .logo {
-        font-family: $font-family-main;
-        font-size: 32px;
-        text-decoration: none;
-        transition: 0.3S;
-        letter-spacing: 2px;
+        color: $color-white;
     }
 
-    link {
+    .link {
         a{
-            text-decoration: none;
-            padding: 30px;
-            transition: 0.3S;
-
-            &:hover {
-                color: $color-sub;
-            }
+        color: $color-white;
         }
     }
     .social {
-
-        padding: 20px 0;
+        text-align: center;
         img {
             filter: invert(62%) sepia(43%) saturate(4496%) hue-rotate(308deg) brightness(88%) contrast(95%);
             transition: 0.3S;
             width: 32px;
             margin-left: 30px;
-
-            &:hover {
-                transition: 0.3S;
-                color: white;
-            }
             
         }
     }
@@ -305,4 +312,25 @@ footer {
     color: $color-white;
     font-size: 8px;
     margin-top: 50px;
+}
+
+.logo-small {
+color: $color-white;
+font-family: $font-family-main;
+letter-spacing: 3px;
+padding-left: 3px;
+font-size: 16px;
+}
+
+#arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #999;
+    // 圓角
+    border-radius: 50%;
+    padding: 10px;
+    // 手指游標
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba (0,0,0,0.3);
 }

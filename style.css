@@ -6,6 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 微軟正黑體;
+  color: #E86895;
 }
 
 #navigation {
@@ -25,6 +26,12 @@
   z-index: 1;
 }
 
+@media screen and (min-width: 1025px) {
+  #navigation {
+        grid-template-areas: "logo social menu";
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #navigation {
         grid-template-areas: "logo social menu";
@@ -33,7 +40,7 @@
 
 @media screen and (max-width: 767px) {
   #navigation {
-    padding: 10px 6px;
+        grid-template-areas: "logo social menu";
   }
 }
 
@@ -130,6 +137,25 @@
 
 #banner .dots {
   bottom: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  #banner {
+    height: 100%;
+  }
+  #banner .slick-track {
+    height: 900px;
+  }
+  #banner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .slick-track {
+    height: 500px;
+  }
 }
 
 #about {
@@ -253,32 +279,20 @@ p {
 
 footer {
   background: lightpink;
-  padding: 50px 0;
+  padding: 90px 0;
   text-align: center;
 }
 
 footer .logo {
-  font-family: "Kufam", cursive;
-  font-size: 32px;
-  text-decoration: none;
-  -webkit-transition: 0.3S;
-  transition: 0.3S;
-  letter-spacing: 2px;
+  color: #eee;
 }
 
-footer link a {
-  text-decoration: none;
-  padding: 30px;
-  -webkit-transition: 0.3S;
-  transition: 0.3S;
-}
-
-footer link a:hover {
-  color: #FF1F17;
+footer .link a {
+  color: #eee;
 }
 
 footer .social {
-  padding: 20px 0;
+  text-align: center;
 }
 
 footer .social img {
@@ -290,15 +304,29 @@ footer .social img {
   margin-left: 30px;
 }
 
-footer .social img:hover {
-  -webkit-transition: 0.3S;
-  transition: 0.3S;
-  color: white;
-}
-
 #copyright {
   color: #eee;
   font-size: 8px;
   margin-top: 50px;
+}
+
+.logo-small {
+  color: #eee;
+  font-family: "Kufam", cursive;
+  letter-spacing: 3px;
+  padding-left: 3px;
+  font-size: 16px;
+}
+
+#arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: #999;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 2px 5px rgba 0, 0, 0, 0.3;
+          box-shadow: 0 2px 5px rgba 0, 0, 0, 0.3;
 }
 /*# sourceMappingURL=style.css.map */
